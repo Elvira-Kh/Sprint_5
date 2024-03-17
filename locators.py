@@ -15,3 +15,4 @@ class StellarburgersLocators:
     FLUORESCENT_BUN_BUTTON = (By.XPATH, "//button[contains(text(), 'Флюоресцентная')]")
     SAUCE_LINK = (By.XPATH, "//a[contains(text(), 'Соусы')]")
     SPACE_SAUCE_BUTTON = (By.XPATH, "//button[contains(text(), 'Space Sauce')]")
+    HISTORY_LINK = (By.XPATH, "//button[contains(text(), 'История заказов')]")
