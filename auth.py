@@ -1,13 +1,11 @@
 import pytest
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from locators import StellarburgersLocators
-from data import TestData
 from faker import Faker
+from data import TestData
 
 fake = Faker()
-
 
 class TestStellarburgersAuthentication:
 
@@ -43,8 +41,6 @@ class TestStellarburgersAuthentication:
         driver.find_element(*StellarburgersLocators.EMAIL_INPUT).send_keys(TestData.email)
         driver.find_element(*StellarburgersLocators.PASSWORD_INPUT).send_keys(TestData.password)
         driver.find_element(*StellarburgersLocators.SUBMIT_BUTTON).click()
-        WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located(*StellarburgersLocators.ORDER_BUTTON))
+        WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located(StellarburgersLocators.ORDER_BUTTON))
         order_button = driver.find_element(*StellarburgersLocators.ORDER_BUTTON)
         assert order_button.text == "Оформить заказ", "Элемент 'Оформить заказ' не найден"
-
-

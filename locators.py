@@ -16,4 +16,7 @@ class StellarburgersLocators:
     SAUCE_LINK = (By.XPATH, "//a[contains(text(), 'Соусы')]")
     SPACE_SAUCE_BUTTON = (By.XPATH, "//button[contains(text(), 'Space Sauce')]")
     HISTORY_LINK = (By.XPATH, "//button[contains(text(), 'История заказов')]")
+<<<<<<<<< Temporary merge branch 1
+=========
     SAVE_BUTTON = (By.XPATH, "//button[contains(text(), 'Сохранить')]")
+>>>>>>>>> Temporary merge branch 2
