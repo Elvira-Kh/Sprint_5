@@ -15,8 +15,8 @@ class TestStellarburgersAccount:
         driver.find_element(*StellarburgersLocators.SUCCESS_LOGIN_BUTTON).click()
         assert order_button.text == "Оформить заказ", "Элемент 'Оформить заказ' не найден"
         driver.find_element(*StellarburgersLocators.ORDER_BUTTON).click()
-        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//button[contains(text(), 'История заказов')]")))
-        assert driver.find_element(By.XPATH, "//button[contains(text(), 'История заказов')]").is_displayed(), "Login failed"
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(*StellarburgersLocators.HISTORY_LINK)
+        assert driver.find_element(*StellarburgersLocators.HISTORY_LINK).is_displayed(), "Login failed"
 
 
     # переход по клику на «Конструктор»
