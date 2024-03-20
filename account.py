@@ -1,4 +1,4 @@
-import pytest
+mport pytest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -23,7 +23,8 @@ class TestStellarburgersAccount:
 
     def test_navigation_to_constructor(self, driver):
         driver.find_element(*StellarburgersLocators.PROTOSTOMIA_BUTTON).click()
-        order_button = WebDriverWait(driver, 10).until(EC.visibility_of_element_located(StellarburgersLocators.ORDER_BUTTON))
+        order_button = WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located(StellarburgersLocators.ORDER_BUTTON))
         assert order_button.text == "Оформить заказ", "Элемент 'Оформить заказ' не найден"
 
     # переход по клику на «Stellar Burgers»

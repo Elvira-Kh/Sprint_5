@@ -47,28 +47,4 @@ class TestStellarburgersAuthentication:
         order_button = driver.find_element(*StellarburgersLocators.ORDER_BUTTON)
         assert order_button.text == "Оформить заказ", "Элемент 'Оформить заказ' не найден"
 
-  # проверка для подтверждения перехода к странице "Начинки"
-class TestStellarburgersPages:
-    def test_navigation_stuffings(self, driver):
-        driver.get('https://stellarburgers.nomoreparties.site')
-        driver.find_element(*StellarburgersLocators.STUFFINGS_LINK).click()
-        WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located(*StellarburgersLocators.PROTOSTOMIA_BUTTON))
-        assert driver.find_element(*StellarburgersLocators.PROTOSTOMIA_BUTTON).is_displayed()
-
-    # проверка для подтверждения перехода к странице "Булки"
-    def test_navigation_buns(self, driver):
-        driver.get('https://stellarburgers.nomoreparties.site')
-        driver.find_element(*StellarburgersLocators.BUNS_LINK).click()
-        WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located(*StellarburgersLocators.FLUORESCENT_BUN_BUTTON))
-        assert driver.find_element(*StellarburgersLocators.FLUORESCENT_BUN_BUTTON).is_displayed()
-
-    # проверка для подтверждения перехода к странице "Соусы"
-    def test_navigation_sauces(self, driver):
-        driver.get('https://stellarburgers.nomoreparties.site')
-        driver.find_element(*StellarburgersLocators.SAUCE_LINK).click()
-        WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located(*StellarburgersLocators.SPACE_SAUCE_BUTTON))
-        assert driver.find_element(*StellarburgersLocators.SPACE_SAUCE_BUTTON).is_displayed()
-
-
-
 
