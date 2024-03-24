@@ -1,9 +1,8 @@
-import pytest
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-from locators import StellarburgersLocators
+from Sprint_5.locators import StellarburgersLocators
 from faker import Faker
-from data import TestData
+from Sprint_5.data import TestData
 
 fake = Faker()
 
